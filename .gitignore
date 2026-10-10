@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+models_cache/*.onnx
+models_cache/dnsmos/
+samples/out/
+build/
+dist/
+installer_out/
+*.spec
+samples/raw/music_fishin.wav
+samples/raw/music_pistachio.wav
+samples/raw/music_vibeace.wav
+samples/raw/music_brahms.wav
+samples/raw/music_sweetwaltz.wav
+samples/raw/music_trumpet.wav

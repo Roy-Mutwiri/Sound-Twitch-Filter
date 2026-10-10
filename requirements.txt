@@ -1,0 +1,23 @@
+# Stream Voice Focus - pinned to the versions tested on 2026-10-10 (Windows 11, Python 3.11.9)
+# torch/torchaudio CPU builds come from the PyTorch index (see install.bat / run_app.bat).
+--extra-index-url https://download.pytorch.org/whl/cpu
+numpy==1.26.4
+sounddevice==0.5.6
+soundfile==0.14.0
+soxr==1.1.0
+onnxruntime==1.31.0
+torch==2.14.1+cpu
+torchaudio==2.11.0+cpu
+deepfilternet==0.5.6
+deepfilterlib==0.5.6
+dpdfnet==0.6.0
+pyrnnoise==0.4.5
+PySide6==6.12.0
+# evaluation / tests only
+pystoi==0.4.1
+pesq==0.0.4
+librosa==0.11.0
+pytest==8.4.2
+# packaging only
+pyinstaller==6.16.0
+backports.tarfile==1.2.0
