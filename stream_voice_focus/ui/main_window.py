@@ -512,9 +512,20 @@ class MainWindow(QMainWindow):
         self.loader.done.connect(self._model_loaded)
         self.loader.start()
 
+    @staticmethod
+    def _log_error(text: str):
+        try:
+            d = os.path.join(os.environ.get("LOCALAPPDATA") or os.path.expanduser("~"), "StreamVoiceFocus")
+            os.makedirs(d, exist_ok=True)
+            with open(os.path.join(d, "error.log"), "a", encoding="utf-8") as f:
+                f.write(text.rstrip() + "\n\n")
+        except Exception:
+            pass
+
     def _model_loaded(self, model, err):
         self.loader = None
         if model is None:
+            self._log_error("Model load failed:\n" + err)
             self.btn_start.setEnabled(True)
             self.btn_start.setText("▶  Start")
             self._set_pill("Error", "error")

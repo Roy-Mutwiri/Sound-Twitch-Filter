@@ -13,7 +13,7 @@ set PYTHONPATH=%~dp0
   --add-data "models_cache\dfn3_stream.onnx;models_cache" ^
   --collect-all dpdfnet --collect-all pyrnnoise --collect-all onnxruntime --collect-all soxr ^
   --collect-all sounddevice --collect-all soundfile --hidden-import backports.tarfile ^
-  --exclude-module torch --exclude-module torchaudio --exclude-module df --exclude-module librosa ^
+  --exclude-module torch --exclude-module torchaudio --exclude-module df ^
   --exclude-module matplotlib --exclude-module pesq --exclude-module pystoi --exclude-module pytest ^
   --exclude-module PySide6.QtWebEngineCore --exclude-module PySide6.QtWebEngineWidgets --exclude-module PySide6.Qt3DCore ^
   --exclude-module PySide6.QtQuick --exclude-module PySide6.QtQml --exclude-module PySide6.QtPdf --exclude-module PySide6.QtCharts ^
